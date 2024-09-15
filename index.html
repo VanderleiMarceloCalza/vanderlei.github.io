@@ -1,57 +1,140 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-	<heat>
-		<meta charset="UTF-8">
-		<title>Barbearia Alura</title>
+<html lang="en">
 
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style_home.css"> 
-	</heat>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panificadora Carlos Gomes</title>
+    <style>
+        body {
+            margin: 0;
+        }
 
-	<body>
-		<header>
-			<div class="caixa">
-			<h1><img src="logo.png"></h1>
-			
+        .container {
+            display: grid;
+        }
 
-			<nav>
-				<ul>
-					<li><a href="index.html">*Home</a></li>
-					<li><a href="produtos.html">*Produtos  </a></li>
-					<li><a href="contatos.html">*Contatos  </a></li>
-				</ul>
-			</nav>
-			</div>
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            
+            background-color: #5e75e9;
+           
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*centraliza o menu*/
+            gap: 20px;/*https://nekocalc.com/px-to-rem-converter*/
+        }
 
 
-		</header>
-		<h1 class="titulo-principal">Barbearia Alura</h1>
-		<img id="banner" src="banner.jpg">
-		<div class="principal">
-			<h2 class= "titulo-centralizado">Sobre a Barbearia Alura</h2>
+        .imagem_leo {
+            grid-column-start: 1;
+            grid-column-end: 3;
 
-			<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+        }
 
-			<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
 
-			<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-	</div>
-	<div class="beneficios">
+        }
 
-		<h3 class= "titulo-centralizado">Benefícios</h3>
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #5e75e9;
+            color: white;
+            text-align: center;
+        }
 
-		<ul>
-			<li class="itens">Atendimento aos Clientes</li>
-			<li class="itens">Espaço diferenciado</li>
-			<li class="itens">Localização</li>
-			<li class="itens">Proficionais Qualificados</li>
-		</ul>
-		<img id="imagemBeneficios" src="beneficios.jpg"> 
-	</div>
+        ul {
+            list-style-type: none;
+            color: #5e75e9;
+        }
 
-		<footer>
-			<img src="logo-branco.png">
-			<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
-		</footer>
-	</body>
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid #5e75e9 1px;
+        }
+
+        li {
+            float: left;
+        }
+
+        a:hover {
+            background-color: #5e75e9;
+            color: white;
+        }
+
+        /* media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+
+            .imagem_leo {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+        }
+    </style>
+</head>
+ 
+<body>
+    <header class="container">
+        <h1 style="color: white; text-align: center;">Panificadora Carlos Gomes</h1>
+        <h2 style="color: white; text-align: center;">Nossa Padaria</h2>
+        
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="indexPadaria.html">Padaria</a></li>
+            <li><a href="Produtos.html">Produtos</a></li>
+            <li><a href="ProjetoSocial.html">Progeto Social</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper">
+        <aside class="frentePadaria">
+            <img src="frentePadaria.jpeg" width="800px">
+            <div class="infos">
+                <p><strong>Tradicional</strong> desde 2003</p>
+                
+            </div>
+
+        </aside>
+        <section class="principal">
+            <h1>
+                Mais de 20 anos à seu serviço
+            </h1>
+            <p>No começo do ano de 2003 começamos a fazer pãezinhos para a vizinhança, de vagarzinho foi caindo no gosto dos vizinhos e a propaganda boca boca foi trazendo mais clientes de vários bairros da cidade, e com o passar dos anos até clientes das cidades vizinhas vem a procura de nossos produtos.</p>
+            <p>Nada mais justo de nossa parte já que bem sussedidos no nosso ramo iniciarmos nosso <strong>Projeto Social</strong></p>
+            <p>E você nosso cliente e amigo pode nos ajudar conheça nosso projeto clicando no link <strong>Projeto Social</strong> no menu acima. </p>
+            
+        </section>
+    </div>
+    <footer class="container">
+        <h1>Desenvolvido por iniciante em programação</h1>
+        <H2>Desculpe a simplicidade do site no momento espero poder melhora-lo muito com meu aprendizado na faculdade.</H2>
+    </footer>
+    </div>
+</body>
+
 </html>
